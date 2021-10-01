@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap");
+
+* {
+  font-family: "DM Sans", sans-serif;
+}
+
+/* 
+    #161616 Negro
+    #346751 Verde
+    #C84B31 Naranja
+    #ECDBBA Beis
+*/
+
+button.button,
+a.button {
+  border-radius: 0;
+  align-items: center;
+}
+
+input, .box {
+  border-radius: 0 !important;
+}
+
+input.input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #346751;
+  opacity: 1; /* Firefox */
+}
+
+.button.is-success,
+.button.is-success.is-hovered,
+.button.is-success:hover,
+.button.is-info.is-light.is-hovered,
+.button.is-info.is-light:hover,
+.button.is-info.is-light,
+button.dt-button,
+div.dt-button,
+a.dt-button,
+input.dt-button,
+button.dt-button:hover:not(.disabled),
+div.dt-button:hover:not(.disabled),
+a.dt-button:hover:not(.disabled),
+input.dt-button:hover:not(.disabled) {
+  background-color: #346751;
+  color: #fff;
+  border: 0;
+  border-radius: 0;
+}
+
+.navbar-link.is-active,
+.navbar-link:focus,
+.navbar-link:focus-within,
+.navbar-link:hover,
+a.navbar-item.is-active,
+a.navbar-item:focus,
+a.navbar-item:focus-within,
+a.navbar-item:hover {
+  color: #346751 !important;
+}
+
+.navbar-link:not(.is-arrowless)::after {
+  border-color: #346751;
+}
+
+tr.campaingProperyTable:hover > td > span > i.fa-trash{
+  color: #346751 !important;
+  cursor: pointer;
+}
+
+.leaflet-popup-content-wrapper{
+  border-radius: 0;
+}
