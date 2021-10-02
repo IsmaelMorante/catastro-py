@@ -16,4 +16,4 @@ class DevelopmentConfig(Config):
 
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', None)
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_CONN', None)
