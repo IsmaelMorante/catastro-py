@@ -10,6 +10,7 @@ def page_not_found(e):
     print('Error', e)
     return redirect(url_for('main.index'))
 
+
 def create_app():
     app = Flask(__name__, static_url_path='/static')
     is_prod = os.environ.get('PRODUCTION', None)
@@ -19,6 +20,11 @@ def create_app():
         app.config.from_object("app.config.DevelopmentConfig")
 
     db.init_app(app)
+    with app.app_context():
+        from app.models import Test
+        db.create_all()
+        db.session.commit()
+
     sslify = SSLify(app, subdomains=True)
     app.register_error_handler(500, page_not_found)
     app.register_error_handler(404, page_not_found)
@@ -41,5 +47,6 @@ def create_app():
     #     return User.query.get(int(user_id))
 
     return app
+
 
 app = create_app()
